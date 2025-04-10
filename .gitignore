@@ -1,0 +1,4 @@
+venv
+STATICFILES
+.env
+__pycache__

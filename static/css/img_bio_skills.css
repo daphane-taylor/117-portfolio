@@ -1,0 +1,56 @@
+.profile-img {
+	width: 300px;
+	height: auto;
+	border-radius:30%;
+	margin: 1rem;
+}
+.about-container {
+	margin: 1rem 1rem;
+	display: flex;
+	flex-direction: row;
+	font-family: Candara;
+	font-size: 1.1rem;
+}
+
+.bio-skills-container {
+	margin: 2rem 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content:flex-start;
+	align-items: center;
+	text-align: center;
+}
+
+.bio-title,
+.role {
+	text-align: center;
+}
+
+p {
+	margin-top: 1rem;
+}
+.skills-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.skills-title {
+	text-align: center;
+}
+.skills {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}	
+
+.skill-btn {
+	margin: 0 .5rem;
+	padding: .5rem;
+	background-color: var(--header-color);
+	color: var(--background-color);
+	border: solid 1px var(--header-color);
+	border-radius: 1rem;
+	font-family: var(--Poiret-one-text);
+	font-size: 1rem;
+}

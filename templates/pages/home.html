@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Daphane's Portfolio{% endblock title %}
+
+{% block content %}
+<div class="about-container" id="about">
+	<div class="img-container">
+		<img class="profile-img" src="{% static '/img/daphane.jpg' %}" alt="profile-image">
+	</div>
+
+	<div class="bio-skills-container">
+		<div class="bio-section">
+			<h1 class="bio-title">Welcome, I'm Daphane Taylor</h1>
+			<h4 class="role">Full Stack Developer</h4>
+			<br />
+
+			<p><p>Hello, my name is Daphane Taylor, i'm 30 years old and have gotten my certification as a Full Stack Developer from Northwest Georgia. I'm very passionate about continuously learning new programming languages and practices to stay ahead in the ever-evolving tech world and have an insatiable curiosity and drive for self-improvement. I enjoy working with Python and Django the most out of them all, but enjoy working with them all. I find satisfaction in solving complex coding problems and creating innovative web solutions & designs. Currently, i'm a student at San Diego Global Knowledge University, enrolled in the Full Stack Development Immersive Course, which i aim to graduate in late May 2025. After that, i plan on enrolling in their Full Stack Development Degree course to add a degree along with my certification.</p><br />
+			
+			<p>Ive completed a handful of projects already that i've showcased below in the projects section of my portfolio. A few being A Pet Salon Services Site, where pet owners can submit a form to requests services for their pet from the groomers. Another is Issue Manager that could be used by anyone or any company to keep track of any issue that arise throught out the course of the day or project. </p>
+		</div>
+
+	</div>
+	
+</div>
+
+<div class="skills-section">
+	<div>
+		<h3 class="skills-title">My Skills</h3>
+	</div>
+
+	<div class="skills">
+		<button class="skill-btn">HTML</button>
+		<button class="skill-btn">CSS</button>
+		<button class="skill-btn">JAVASCRIPT</button>
+		<button class="skill-btn">JQUERY</button>
+		<button class="skill-btn">FLASK</button>
+		<button class="skill-btn">PYTHON</button>
+		<button class="skill-btn">REACT</button>
+		<button class="skill-btn">DJANGO</button>
+		<br />
+		<button class="skill-btn">VS CODE</button>
+		<button class="skill-btn">FIGMA</button>
+		<button class="skill-btn">UI/UX</button>
+		<button class="skill-btn">UBUNTU</button>
+		<button class="skill-btn">BOOTSTRAP</button>
+		<button class="skill-btn">JUPYTER NOTEBOOKS</button>
+		<button class="skill-btn">SCRUM</button>
+	</div>
+</div>
+	<!-- Projects Section -->
+<section id="projects" class="projects-container">
+	<h2 class="projects-title">My Projects</h2>
+	<div class="projects-grid">
+		<div class="project-card">
+			<div class="project-img">
+				<img src="{% static 'img/blog-site.jpg' %}" alt="Personal Blog Screenshot" class="project-screenshot">
+			</div>
+			<h3 class="project-title">Personal Blog</h3>
+			<h4 class="project-subtitle">School Project</h4>
+			<p class="project-description">Allows you to create different interest you can blog about like food, tech, music, hobbies, sports, daily updates,etc. It also features an admin panel to see stats about users and the time spent on the site.</p>
+			<p class="project-description">2024</p>
+			<div class="project-skills">
+				<button class="project-skill-btn">HTML</button>
+				<button class="project-skill-btn">CSS</button>
+				<button class="project-skill-btn">DJANGO</button>
+				<button class="project-skill-btn">PYTHON</button>
+				<button class="project-skill-btn">UBUNTU</button>
+				<button class="project-skill-btn">BOOTSTRAP</button>
+				<button class="project-skill-btn">VISUAL STUDIO CODE</button>
+			</div>
+		</div>
+		<div class="project-card">
+			<div class="project-img">
+				<img src="{% static 'img/pet-services.jpg' %}" alt="E-Commerce Site Screenshot" class="project-screenshot">
+			</div>
+			<h3 class="project-title">Pet Salon Services</h3>
+			<h4 class="project-subtitle">School Project</h4>
+			<p class="project-description">Allows clients to request a haircut, grooming, wash and dry, brush teeth and nails, or other special services where the pet owner can manage all requests through an admin panel linked to the groomer.</p>
+			<p class="project-description">2024</p>
+			<div class="project-skills">
+				<button class="project-skill-btn">HTML</button>
+				<button class="project-skill-btn">CSS</button>
+				<button class="project-skill-btn">JAVASCRIPT</button>
+				<button class="project-skill-btn">JQUERY</button>
+				<button class="project-skill-btn">BOOTSTRAP</button>
+				<button class="project-skill-btn">VISUAL STUDIO CODE</button>
+			</div>
+		</div>
+		<div class="project-card">
+			<div class="project-img">
+				<img src="{% static 'img/issue-manager.jpg' %}" alt="Issue Manager Screenshot" class="project-screenshot">
+			</div>
+			<h3 class="project-title">Issue Manager</h3>
+			<h4 class="project-subtitle">School Project</h4>
+			<p class="project-description">Allows a company to enter various issues that may arise and assign them to certain employee's to complete. Like pending website functionality issues, customer complaints or any issues related to the company..</p>
+			<p class="project-description">2025</p>
+			<div class="project-skills">
+				<button class="project-skill-btn">DJANGO</button>
+				<button class="project-skill-btn">HTML</button>
+				<button class="project-skill-btn">CSS</button>
+				<button class="project-skill-btn">DJANGO</button>
+				<button class="project-skill-btn">PYTHON</button>
+				<button class="project-skill-btn">UBUNTU</button>
+				<button class="project-skill-btn">BOOTSTRAP</button>
+				<button class="project-skill-btn">VISUAL STUDIO CODE</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="experience-container">
+	<h2 class="experience-title">My Experience</h2>
+	<div class="experience-grid">
+		<div class="experience-card">
+			<h3 class="experience-company">San Diego Global Knowledge University</h3>
+			<h4 class="experience-position">Full Stack Development Course</h4>
+			<p class="experience-description">Learned a variety of programming languages throughout a 6month course, like django, react, python, API and UI/UX design along with database and database stuctures.</p>
+			<p class="experience-duration">November 2024 - May 2025</p>
+			<div class="experience-skills">
+				<button class="experience-skill-btn">DJANGO</button>
+				<button class="experience-skill-btn">REACT</button>
+				<button class="experience-skill-btn">PYTHON</button>
+				<button class="experience-skill-btn">JAVASCRIPT</button>
+				<button class="experience-skill-btn">UBUNTU</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-container">
+	<h2 class="contact-title">Contact</h2>
+	<form class="contact-form">
+		<div class="form-group">
+			<label class="form-label">Name</label>
+			<input type="text" class="form-input">
+		</div>
+		<div class="form-group">
+			<label class="form-label">Email</label>
+			<input type="email" class="form-input">
+		</div>
+		<div class="form-group">
+			<label class="form-label">Subject</label>
+			<input type="text" class="form-input">
+		</div>
+		<div class="form-group">
+			<label class="form-label">Message</label>
+			<textarea class="form-textarea"></textarea>
+		</div>
+		<div class="form-buttons">
+			<button type="submit" class="form-button">SEND EMAIL</button>
+			<button type="reset" class="form-button">CANCEL</button>
+		</div>
+	</form>
+</section>
+
+<footer class="footer-container">
+	<div class="footer-left">
+		<p>DAPHANE ELIZABETH TAYLOR</p>
+	</div>
+	<div class="footer-middle">
+		<img src="img\daphane.jpg" alt="Footer Profile" class="footer-img">
+	</div>
+	<div class="footer-right">
+		<a href="{% url 'about_view' %}" class="footer-link">About Us</a>
+		<a href="{% url 'projects_list' %}" class="footer-link">Projects</a>
+		<a href="{% url 'experience_list' %}" class="footer-link">Experience</a>
+		<a href="{% url 'contact_view' %}" class="footer-link">Contact</a>
+	</div>
+</footer>
+{% endblock content %}

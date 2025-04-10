@@ -1,0 +1,253 @@
+/*Phone View*/
+@media(max-width:640px){
+	html {
+		font-size: 12px;
+	}
+
+	/*header*/
+	.header-container {
+		flex-direction: column;
+		height: max-content;
+		padding: 2%;
+	}
+	
+	.nav-options{
+		margin-top: 2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 100%
+	}
+
+	.nav-options a {
+		margin: 1rem 0px;
+	}
+
+	/*Ham button*/
+	.nav-btn {
+		display: inline-flex;
+	}
+
+	.header-left-side {
+		width: 100%;
+	}
+
+	.header-right-side {
+		width: 100%;
+		align-items: baseline;
+	}
+
+	/*toggle function -> ~ */
+	#nav-check:not(:checked) ~ .nav-options {
+		overflow: hidden;
+		height: 0px;
+	}
+
+	#navchecked:checked ~ .nav-options {
+		overflow: auto;
+		height: auto;
+	}
+
+	/*img_bio_skills*/
+	.bio-skills-container {
+		margin: 1rem 0rem; /*reduce margin for phone view*/
+		display: flex;
+		flex-direction: column;
+		justify-content: center;  
+		align-items: center;
+		text-align: center;
+	}
+    
+    /* About container - stack vertically */
+    .about-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+    
+    .img-container {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .profile-img {
+        width: 250px !important;
+        height: 300px !important;
+    }
+    
+    .skills {
+        flex-wrap: wrap !important;
+    }
+    
+    /* Projects responsive */
+    .projects-container {
+        padding: 0 1rem;
+    }
+    
+    .projects-grid {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    
+    .project-card {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    
+    .project-screenshot {
+        height: 220px;
+        object-fit: cover;
+        background-position: center;
+    }
+    
+    .project-description {
+        padding: 0 0.5rem;
+        font-size: 1rem;
+    }
+    
+    .project-skills {
+        padding: 0 0.5rem 1rem;
+    }
+    
+    .project-skill-btn {
+        margin: 0.15rem 0.25rem;
+        padding: 0.4rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Experience responsive */
+    .experience-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .experience-card {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Contact responsive */
+    .contact-form {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    /* Footer responsive */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 1rem;
+    }
+    
+    .footer-right {
+        width: 100%;
+        margin-top: 1rem;
+        justify-content: space-around;
+    }
+    
+    .footer-middle {
+        margin: 1rem 0;
+    }
+}
+
+/*tablet view*/
+@media(min-width:641px) and (max-width:1007px){
+	html{
+		font-size: 14px;
+	}
+	/*header*/
+	.header-container {
+		flex-direction: column;
+		height: max-content;
+		padding: 2%;
+	}
+	
+	.nav-options{
+		margin-top: 2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.nav-options a {
+		margin: 1rem 0px;
+	}
+    
+    /* About container - stack vertically */
+    .about-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+    
+    .img-container {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    /* Projects responsive */
+    .projects-container {
+        padding: 0 1.5rem;
+    }
+    
+    .projects-grid {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .project-card {
+        width: 48%;
+        margin-bottom: 2rem;
+    }
+    
+    .project-screenshot {
+        height: 220px;
+        object-fit: cover;
+    }
+    
+    /* Experience responsive */
+    .experience-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .experience-card {
+        width: 48%;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Contact responsive */
+    .contact-form {
+        width: 80%;
+    }
+}
+
+/* Desktop view - maintain original properties but add flex-wrap */
+@media(min-width:1008px) {
+    /* Projects grid should wrap if window gets smaller */
+    .projects-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .project-card {
+        width: 30%;
+        margin-bottom: 2rem;
+    }
+    
+    .project-screenshot {
+        height: 300px;
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,70 @@
+.experience-container {
+	margin: 1rem 0;
+	padding: 0 2rem;
+	background-color: var(--background-color);
+	text-align:center;
+}
+
+.experience-title {
+	text-align: center;
+	margin-bottom: 1rem;
+	font-family: var(--candara-text);
+	color: var(--text-color);
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.experience-grid {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	border: 1px solid var(--header-color)
+}
+
+.experience-card {
+	width: 70%;
+	margin-bottom: 2rem;
+	color: var(--text-color);
+}
+
+.experience-company {
+	font-family: var(--candara-text);
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+}
+
+.experience-position {
+	font-family: var(--candara-text);
+	font-style: italic;
+	margin-bottom: 0.5rem;
+}
+
+.experience-description {
+	text-align: center;
+	margin-bottom: 1rem;
+	font-size: 1.1rem;
+}
+
+.experience-duration {
+	font-family: var(--candara-text);
+	font-style: italic;
+	margin-bottom: 1rem;
+}
+
+.experience-skills {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.experience-skill-btn {
+	padding: 10px;
+	background-color: var(--header-color);
+	color: var(--background-color);
+	border: solid 1px var(--header-color);
+	border-radius: 1rem;
+	font-family: var(--Poiret-one-text);
+	font-size: 1rem;
+}

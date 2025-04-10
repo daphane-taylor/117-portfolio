@@ -1,0 +1,47 @@
+:root {
+	--background-color: #F7ECD8;
+	--text-color: #333333;
+	--header-color: #8C8274;
+	--footer-color: #8C8274;
+	--skill-color: #50592E;
+	--hover-color: #FFFFFF;
+	--skill-text: #F7ECD8;
+
+	--poiret-one-text: # "Poiret One", sans-serif;
+	--candara-text: Candara, serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a{
+	text-decoration: none;
+}
+
+html {
+	font-size: 16px;
+	font-family: var(--candara-text);
+}
+
+body {
+	background-color: var(--background-color);
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+.center-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.center-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

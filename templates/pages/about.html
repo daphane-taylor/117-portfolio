@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About{% endblock title %}
+
+{% block content %}
+<div class="about-container" id="about">
+	<div class="img-container">
+		<img class="profile-img" src="{% static '/img/daphane.jpg' %}" alt="profile-image">
+	</div>
+
+	<div class="bio-skills-container">
+		<div class="bio-section">
+			<h1 class="bio-title">Welcome, I'm Daphane Taylor</h1>
+			<h4 class="role">Full Stack Developer</h4>
+			<br />
+
+			<p><p>Hello, my name is Daphane Taylor, i'm 30 years old and have gotten my certification as a Full Stack Developer from Northwest Georgia. I'm very passionate about continuously learning new programming languages and practices to stay ahead in the ever-evolving tech world and have an insatiable curiosity and drive for self-improvement. I enjoy working with Python and Django the most out of them all, but enjoy working with them all. I find satisfaction in solving complex coding problems and creating innovative web solutions & designs. Currently, i'm a student at San Diego Global Knowledge University, enrolled in the Full Stack Development Immersive Course, which i aim to graduate in late May 2025. After that, i plan on enrolling in their Full Stack Development Degree course to add a degree along with my certification.</p>.</p><br />
+			
+			<p>Ive completed a handful of projects already that i've showcased below in the projects section of my portfolio. A few being A Pet Salon Services Site, where pet owners can submit a form to requests services for their pet from the groomers. Another is Issue Manager that could be used by anyone or any company to keep track of any issue that arise throught out the course of the day or project. </p>
+		</div>
+
+	</div>
+	
+</div>
+
+<div class="skills-section">
+	<div>
+		<h3 class="skills-title">My Skills</h3>
+	</div>
+
+	<div class="skills">
+		<button class="skill-btn">HTML</button>
+		<button class="skill-btn">CSS</button>
+		<button class="skill-btn">JAVASCRIPT</button>
+		<button class="skill-btn">JQUERY</button>
+		<button class="skill-btn">FLASK</button>
+		<button class="skill-btn">PYTHON</button>
+		<button class="skill-btn">REACT</button>
+		<button class="skill-btn">DJANGO</button>
+		<br />
+		<button class="skill-btn">VISUAL STUDIO CODE</button>
+		<button class="skill-btn">FIGMA</button>
+		<button class="skill-btn">UI/UX</button>
+		<button class="skill-btn">PROJECT MANAGEMENT</button>
+		<button class="skill-btn">UBUNTU</button>
+		<button class="skill-btn">BOOTSTRAP</button>
+		<button class="skill-btn">JUPYTER NOTEBOOKS</button>
+		<button class="skill-btn">SCRUM</button>
+	</div>
+</div>
+{% endblock content %}
