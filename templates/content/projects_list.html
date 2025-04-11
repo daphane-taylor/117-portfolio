@@ -7,78 +7,36 @@
 <section id="projects" class="projects-container">
 	<h2 class="projects-title">My Projects</h2>
 
-{% for project in projects %}
-	<div class="project-card">
-		<h3 class="project-title">{{ project.title }}</h3>
-		<div class="project-img">
-			<img src="{{ project.image.url }}" alt="{{ project.title }} Screenshot" class="project-screenshot">
+	{% if user.is_authenticated %}
+		<div class="projects-btn-container">
+			<a href="{% url 'project_new' %}" class="projects-btn">Add Project</a>
 		</div>
-		<h4 class="project-subtitle">{{ project.subtitle }}</h4>
-		<p class="project-description">{{ project.description }}</p>
-		<p class="project-description">{{ project.year }}</p>
-		<div class="project-skills">
-			{% for skill in project.skills.all %}
-				<button class="project-skill-btn">{{ skill.name }}</button>
-			{% endfor %}
-		</div>	
+	{% endif %}
+
 	<div class="projects-grid">
-		<div class="project-card">
-			<h3 class="project-title">Personal Blog</h3>
-			<div class="project-img">
-				<img src="{% static 'img/blog-site.jpg' %}" alt="Personal Blog Screenshot" class="project-screenshot">
-			</div>
-			<h4 class="project-subtitle">School Project</h4>
-			<p class="project-description">Allows you to create different interest you can blog about like food, tech, music, hobbies, sports, daily updates,etc. It also features an admin panel to see stats about users and the time spent on the site.</p>
-			<p class="project-description">2024</p>
-			<div class="project-skills">
-				<button class="project-skill-btn">HTML</button>
-				<button class="project-skill-btn">CSS</button>
-				<button class="project-skill-btn">DJANGO</button>
-				<button class="project-skill-btn">PYTHON</button>
-				<button class="project-skill-btn">UBUNTU</button>
-				<button class="project-skill-btn">BOOTSTRAP</button>
-				<button class="project-skill-btn">VISUAL STUDIO CODE</button>
-			</div>
-		</div><!--end of card-->
+		{% for project in projects %}
+			<div class="project-card">
+				<h3 class="project-title">{{ project.name }}</h3>
+				<div class="project-img">
+					<img src="{{ project.image }}" alt="{{ project.title }} Screenshot" class="project-screenshot">
+				</div>
+				<div class="project-skills">
+					{% for skill in project.skills.all %}
+						<button class="project-skill-btn">{{ skill.name }}</button>
+					{% endfor %}
+				</div>
+				<p class="project-description">{{ project.description }}</p>
+				<p class="project-description">{{ project.year }}</p>
 
-		<div class="project-card">
-			<h3 class="project-title">Pet Salon Services</h3>
-			<div class="project-img">
-				<img src="{% static 'img/pet-services.jpg' %}" alt="E-Commerce Site Screenshot" class="project-screenshot">
-			</div>
-			<h4 class="project-subtitle">School Project</h4>
-			<p class="project-description">Allows clients to request a haircut, grooming, wash and dry, brush teeth and nails, or other special services where the pet owner can manage all requests through an admin panel linked to the groomer.</p>
-			<p class="project-description">2024</p>
-			<div class="project-skills">
-				<button class="project-skill-btn">HTML</button>
-				<button class="project-skill-btn">CSS</button>
-				<button class="project-skill-btn">JAVASCRIPT</button>
-				<button class="project-skill-btn">JQUERY</button>
-				<button class="project-skill-btn">BOOTSTRAP</button>
-				<button class="project-skill-btn">VISUAL STUDIO CODE</button>
-			</div>
-		</div><!--end of card-->
-
-		<div class="project-card">
-			<h3 class="project-title">Issue Manager</h3>
-			<div class="project-img">
-				<img src="{% static 'img/issue-manager.jpg' %}" alt="Issue Manager Screenshot" class="project-screenshot">
-			</div>
-			<h4 class="project-subtitle">School Project</h4>
-			<p class="project-description">Allows a company to enter various issues that may arise and assign them to certain employee's to complete. Like pending website functionality issues, customer complaints or any issues related to the company..</p>
-			<p class="project-description">2025</p>
-			<div class="project-skills">
-				<button class="project-skill-btn">DJANGO</button>
-				<button class="project-skill-btn">HTML</button>
-				<button class="project-skill-btn">CSS</button>
-				<button class="project-skill-btn">DJANGO</button>
-				<button class="project-skill-btn">PYTHON</button>
-				<button class="project-skill-btn">UBUNTU</button>
-				<button class="project-skill-btn">BOOTSTRAP</button>
-				<button class="project-skill-btn">VISUAL STUDIO CODE</button>
-			</div>
-		</div>
-	</div><!--end of card-->
+				{% if user.is_authenticated %}
+					<div class="project-controls center-row">
+						<a class="btn" href="{% url 'project_update' project.pk %}">Update</a>
+						<a class="btn" href="{% url 'project_delete' project.pk %}">Delete</a>
+					</div>
+				{% endif %}
+			</div>	<!-- end of card -->
+		{% endfor %}
+	</div>
 </section>
 
 {% endblock content %}

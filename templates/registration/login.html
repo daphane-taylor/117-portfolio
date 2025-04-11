@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Login{% endblock title %}
+
+{% block content %}
+<section class="auth-section center-column">
+    <h2 class="section-title">Login</h2>
+    
+    <form method="post" class="auth-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="auth-buttons">
+            <button type="submit" class="auth-btn">Login</button>
+        </div>
+    </form>
+</section>
+{% endblock content %}

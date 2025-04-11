@@ -1,0 +1,114 @@
+/* Project Update Form Styles */
+.new-projects-section {
+	background-color: var(--header-color);
+    margin: 2rem auto;
+    padding: 0 2rem;
+    width: 80%;
+    max-width: 800px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: var(--candara-text);
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#projectForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.5rem;
+}
+
+#projectForm input,
+#projectForm textarea,
+#projectForm select {
+    padding: 0.75rem;
+    border: 1px solid var(--header-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--candara-text);
+    font-size: 1rem;
+    width: 100%;
+    border-radius: 4px;
+}
+
+#projectForm textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#projectForm input[type="file"] {
+    padding: 0.5rem;
+    background-color: transparent;
+}
+
+#projectForm select {
+    height: auto;
+    min-height: 120px;
+}
+
+#projectForm select[multiple] {
+    padding: 0.5rem;
+}
+
+#projectForm select option {
+    padding: 0.5rem;
+}
+
+.project-controls {
+    margin-top: 1.5rem;
+    gap: 1rem;
+}
+
+.projects-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--header-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 4px;
+    font-family: var(--candara-text);
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.projects-btn:hover {
+    background-color: var(--skill-color);
+    color: var(--hover-color);
+}
+
+.projects-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+/* Responsive styles for project form */
+@media (max-width: 640px) {
+    .new-projects-section {
+        width: 95%;
+        padding: 0 1rem;
+    }
+    
+    .project-controls {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .projects-btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1007px) {
+    .new-projects-section {
+        width: 90%;
+    }
+}

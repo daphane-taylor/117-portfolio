@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Delete Project{% endblock title %}
+
+{% block content %}
+<section class="auth-section center-column">
+    <h2 class="section-title">Delete Project</h2>
+    
+    <div class="delete-confirmation">
+        <p>Are you sure you want to delete the project "{{ project.name }}"? This action cannot be undone.</p>
+        <form method="post">
+            {% csrf_token %}
+            <div class="auth-buttons">
+                <button type="submit" class="auth-btn">Yes, Delete</button>
+                <a href="{% url 'projects_list' %}" class="auth-btn">Cancel</a>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock content %}

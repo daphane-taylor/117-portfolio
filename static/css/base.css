@@ -1,47 +1,89 @@
 :root {
-	--background-color: #F7ECD8;
-	--text-color: #333333;
-	--header-color: #8C8274;
-	--footer-color: #8C8274;
-	--skill-color: #50592E;
-	--hover-color: #FFFFFF;
-	--skill-text: #F7ECD8;
+    --background-color: #F7ECD8;
+    --text-color: #333333;
+    --header-color: #8C8274;
+    --footer-color: #8C8274;
+    --skill-color: #50592E;
+    --hover-color: #FFFFFF;
+    --skill-text: #F7ECD8;
 
-	--poiret-one-text: # "Poiret One", sans-serif;
-	--candara-text: Candara, serif;
+    --poiret-one-text: # "Poiret One", sans-serif;
+    --candara-text: Candara, serif;
 }
 
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 a{
-	text-decoration: none;
+    text-decoration: none;
 }
 
 html {
-	font-size: 16px;
-	font-family: var(--candara-text);
+    font-size: 16px;
+    font-family: var(--candara-text);
+    height: 100%;
 }
 
 body {
-	background-color: var(--background-color);
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h3 {
-	font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 .center-row {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .center-column {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sticky header */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--header-color);
+}
+
+/* Main content to push footer down */
+.main-content {
+    flex: 1;
+}
+
+/* Sticky footer */
+.sticky-footer {
+    margin-top: auto;
+}
+
+/* Project update/delete buttons */
+.project-controls {
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.project-controls .btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--header-color);
+    color: var(--background-color);
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.project-controls .btn:hover {
+    background-color: var(--skill-color);
 }

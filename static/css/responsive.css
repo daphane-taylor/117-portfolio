@@ -1,63 +1,63 @@
 /*Phone View*/
 @media(max-width:640px){
-	html {
-		font-size: 12px;
-	}
+    html {
+        font-size: 12px;
+    }
 
-	/*header*/
-	.header-container {
-		flex-direction: column;
-		height: max-content;
-		padding: 2%;
-	}
-	
-	.nav-options{
-		margin-top: 2rem;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		width: 100%
-	}
+    /*header*/
+    .header-container {
+        flex-direction: column;
+        height: max-content;
+        padding: 2%;
+    }
+    
+    .nav-options{
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%
+    }
 
-	.nav-options a {
-		margin: 1rem 0px;
-	}
+    .nav-options a {
+        margin: 1rem 0px;
+    }
 
-	/*Ham button*/
-	.nav-btn {
-		display: inline-flex;
-	}
+    /*Ham button*/
+    .nav-btn {
+        display: inline-flex;
+    }
 
-	.header-left-side {
-		width: 100%;
-	}
+    .header-left-side {
+        width: 100%;
+    }
 
-	.header-right-side {
-		width: 100%;
-		align-items: baseline;
-	}
+    .header-right-side {
+        width: 100%;
+        align-items: baseline;
+    }
 
-	/*toggle function -> ~ */
-	#nav-check:not(:checked) ~ .nav-options {
-		overflow: hidden;
-		height: 0px;
-	}
+    /*toggle function -> ~ */
+    #nav-check:not(:checked) ~ .nav-options {
+        overflow: hidden;
+        height: 0px;
+    }
 
-	#navchecked:checked ~ .nav-options {
-		overflow: auto;
-		height: auto;
-	}
+    #navchecked:checked ~ .nav-options {
+        overflow: auto;
+        height: auto;
+    }
 
-	/*img_bio_skills*/
-	.bio-skills-container {
-		margin: 1rem 0rem; /*reduce margin for phone view*/
-		display: flex;
-		flex-direction: column;
-		justify-content: center;  
-		align-items: center;
-		text-align: center;
-	}
+    /*img_bio_skills*/
+    .bio-skills-container {
+        margin: 1rem 0rem; /*reduce margin for phone view*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;  
+        align-items: center;
+        text-align: center;
+    }
     
     /* About container - stack vertically */
     .about-container {
@@ -87,10 +87,10 @@
         padding: 0 1rem;
     }
     
+    /* Transform to single column */
     .projects-grid {
         flex-direction: column;
         align-items: center;
-        flex-wrap: nowrap;
     }
     
     .project-card {
@@ -152,31 +152,50 @@
     .footer-middle {
         margin: 1rem 0;
     }
+    
+    /* Auth form responsive */
+    .login-section,
+    .password-change-section,
+    .logout-section,
+    .password-change-done-section,
+    .delete-confirmation-section {
+        width: 95%;
+        padding: 1rem;
+    }
+    
+    .form-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .form-button {
+        width: 100%;
+    }
 }
 
 /*tablet view*/
 @media(min-width:641px) and (max-width:1007px){
-	html{
-		font-size: 14px;
-	}
-	/*header*/
-	.header-container {
-		flex-direction: column;
-		height: max-content;
-		padding: 2%;
-	}
-	
-	.nav-options{
-		margin-top: 2rem;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-	}
+    html{
+        font-size: 14px;
+    }
+    /*header*/
+    .header-container {
+        flex-direction: column;
+        height: max-content;
+        padding: 2%;
+    }
+    
+    .nav-options{
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 
-	.nav-options a {
-		margin: 1rem 0px;
-	}
+    .nav-options a {
+        margin: 1rem 0px;
+    }
     
     /* About container - stack vertically */
     .about-container {
@@ -192,7 +211,7 @@
         margin-bottom: 1rem !important;
     }
     
-    /* Projects responsive */
+    /* Projects responsive - two columns */
     .projects-container {
         padding: 0 1.5rem;
     }
@@ -200,7 +219,6 @@
     .projects-grid {
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row;
         justify-content: space-between;
     }
     
@@ -230,6 +248,15 @@
     .contact-form {
         width: 80%;
     }
+    
+    /* Auth form responsive */
+    .login-section,
+    .password-change-section,
+    .logout-section,
+    .password-change-done-section,
+    .delete-confirmation-section {
+        width: 80%;
+    }
 }
 
 /* Desktop view - maintain original properties but add flex-wrap */
@@ -249,5 +276,14 @@
     .project-screenshot {
         height: 300px;
         object-fit: cover;
+    }
+    
+    /* Auth form responsive */
+    .login-section,
+    .password-change-section,
+    .logout-section,
+    .password-change-done-section,
+    .delete-confirmation-section {
+        width: 60%;
     }
 }

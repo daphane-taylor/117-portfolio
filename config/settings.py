@@ -143,3 +143,7 @@ EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 EMAIL_HOST_USER = env('SMTP_EMAIL')
 EMAIL_HOST_PASSWORD = env('SMTP_PASS')
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

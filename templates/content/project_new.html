@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}New Project{% endblock title %}
+
+{% block content %}
+
+<section class="new-projects-section center-column">
+	<h2 class="section-title">New Project</h2>
+
+	<form id="projectForm" method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{ form.name }}
+		{{ form.description }}
+		{{ form.year }}
+		{{ form.image }}
+		{{ form.repository}}
+		{{ form.skills }}
+        
+        <div class="project-controls center-row">
+            <button type="submit" class="projects-btn">Save Project</button>
+            <a href="{% url 'projects_list' %}" class="projects-btn">Cancel</a>
+        </div>
+	</form>
+</section>
+
+{% endblock content %}
